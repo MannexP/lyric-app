@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Navbar from './components/layout/Navbar'
 import Index from './components/layout/Index'
 
-import {Provider} from './context';
+import { Provider }  from './context';
 
 import './App.css';
 
@@ -20,7 +20,7 @@ class App extends Component {
             
             <div className="container">
               <Switch>
-                <Route exact path="/" comoponent={Index} />
+                <Route exact path="/" comoponent={ Index } />
               </Switch>
             </div>
           </React.Fragment>
