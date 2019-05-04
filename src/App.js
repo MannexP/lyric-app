@@ -18,7 +18,6 @@ class App extends Component {
           <React.Fragment>
             <Navbar />
             <div className = "container">
-             <Lyrics/>
               <Switch>
                 <Route exact path="/" component={ Index } />
                 <Route path="/lyrics/track/:id" component= {Lyrics} />

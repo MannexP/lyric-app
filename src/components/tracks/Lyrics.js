@@ -46,12 +46,31 @@ class Lyrics extends Component {
       return (
         <React.Fragment>
             <Link to="/" className="btn btn-dark btn-sm mb-4">Go Back</Link>
-            <div className="card">
+            <h5 className="card">
                 <div className="cardHeader">
                     {track.track_name} by  {''}
                     <span className="atext-secondary">{track.artist_name}</span>
                 </div>
+            </h5>
+            <div className="car-body">
+                <p className="card text">{lyrics.lyrics_body}</p>
             </div>
+            <ul className="list-group mt-3">
+                <li className="list-item-group-item">
+                    <strong>Album ID</strong>: {track.album_id}
+                </li>
+                <li className="list-item-group-item">
+                    <strong>Song Genre</strong>: {track.primary_grnres.music_genre_list[0].music_genre.music_genre_name}
+                </li>
+                <li className="list-group-item">
+                  <strong>Explicit Words</strong>:{track.explicit === 0 ? 'No' : 'Yes'}
+         
+                </li>
+                <li className="list-group-item">
+                   <strong>Release Date</strong>: {track.first_release_date}
+         
+                </li>
+            </ul>
         </React.Fragment>
       ) 
     }
